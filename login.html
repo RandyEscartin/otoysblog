@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="favicon.png">
+    <link rel="stylesheet" href="css/login.css"/>
+    <title>LOGIN PAGE</title>
+    <style>
+
+
+
+
+    </style>
+</head>
+<body>
+
+<video class="LoginVideo" autoplay muted loop>
+    <source src="video/To my Gallery2.mp4" type="video/mp4">
+</video>
+
+<div class="login-container">
+    <div class="loginpic">
+        <img src="images/otoy.png" alt="Login Image">
+    </div>
+    <h2>LOGIN TO PROFILE</h2>
+    <form id="loginForm">
+        <label for="passcode">INPUT PASSCODE:</label>
+        <input placeholder="PASSCODE" type="password" id="passcode" name="passcode" required>
+        <button class="LoginButton" type="button" onclick="validatePasscode()">LOG IN</button>
+    </form>
+</div>
+
+<script>
+    function validatePasscode() {
+        var passcode = document.getElementById("passcode").value;
+
+        if (passcode === "") {
+            alert("Please input passcode.");
+        } else if (passcode !== "Otoy") {
+            alert("Please input a correct passcode.");
+        } else {
+           
+            window.location.href = "Profile.html";
+        }
+    }
+</script>
+
+</body>
+</html>
